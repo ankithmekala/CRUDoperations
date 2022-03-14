@@ -1,0 +1,29 @@
+GET http://localhost:3000/subscribers
+
+###
+
+GET http://localhost:3000/subscribers
+
+###
+
+
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "name": "HASH",
+    "email": "infoba@inc.com",
+    "region": "usa",
+    "aadhar": "123456789",
+    "gender": "male",
+    "subscribedToChannel": "manu"
+}
+###
+
+DELETE http://localhost:8000/subscribers
+
+###
+
+PATCH  http://localhost:3000/subscribers
+
+
