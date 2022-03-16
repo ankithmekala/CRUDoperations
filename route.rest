@@ -2,7 +2,7 @@ GET http://localhost:3000/subscribers
 
 ###
 
-GET http://localhost:3000/subscribers
+GET http://localhost:3000/subscribers/6229dd55ff59b76d32364315
 
 ###
 
@@ -11,19 +11,19 @@ POST http://localhost:3000/subscribers
 Content-Type: application/json
 
 {
-    "name": "HASH",
+    "name": "obamaaaaaaa",
     "email": "infoba@inc.com",
-    "region": "usa",
-    "aadhar": "123456789",
-    "gender": "male",
-    "subscribedToChannel": "manu"
+    "region": "hyd",
+    "aadhar": "1234567213543",
+    "gender": "female",
+    "subscribedToChannel": "infojiniinc"
 }
 ###
 
-DELETE http://localhost:8000/subscribers
+DELETE http://localhost:3000/subscribers/622f4414d70e4e2c8b5e8047
 
 ###
 
-PATCH  http://localhost:3000/subscribers
+PATCH  http://localhost:3000/subscribers/6229dd55ff59b76d32364315
 
 

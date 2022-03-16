@@ -2,7 +2,9 @@ require('dotenv').config()
 
 const express = require('express')
 const app = express()
+
 const mongoose = require('mongoose')
+const subscriber = require('./models/subscriber')
 
 mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
 const db = mongoose.connection

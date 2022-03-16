@@ -3,6 +3,9 @@ const res = require('express/lib/response')
 const subscriber = require('../models/subscriber')
 const router = express.Router()
 const Subscriber = require('../models/subscriber')
+const { authSchema } = require('../models/validation_schema')
+
+
 
 //getting all
 router.get('/', async (req, res) => {
@@ -29,12 +32,15 @@ router.post('/', async (req, res) => {
         subscribedToChannel: req.body.subscribedToChannel
     })
     try {
+        const result = await authSchema.validateAsync(req.body)
+        //console.log(result)
         const newSubscriber = await subscriber.save()
         res.status(201).json(newSubscriber)
     } catch (err) {
         res.status(400).json({ message: err.message })
     }
 })
+
 //updating one
 router.patch('/:id', getSubscriber, async (req, res) => {
     if (req.body.name != null) {
@@ -87,4 +93,6 @@ async function getSubscriber(req, res, next) {
     next()
 
 }
+
+
 module.exports = router
